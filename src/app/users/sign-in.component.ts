@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router'
-import { DataRepositoryService } from '../services/data-repository.service'
+import { UserRepositoryService } from '../services/user-repository.service'
 
 
 @Component({
@@ -76,10 +76,10 @@ import { DataRepositoryService } from '../services/data-repository.service'
 export class SignInComponent {
   credentials: any = {};
 
-  constructor(private router: Router, private dataRepository: DataRepositoryService) { }
+  constructor(private router: Router, private userRepositoryService: UserRepositoryService) { }
 
   signIn(credentials: any) {
-    this.dataRepository.signIn(credentials)
+    this.userRepositoryService.signIn(credentials)
       .subscribe({
         error: (err) => { console.error(err, 'Error') },
         complete: () => this.router.navigate(['/catalog'])

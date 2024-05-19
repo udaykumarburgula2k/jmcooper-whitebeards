@@ -9,7 +9,8 @@ import { catalogComponent } from "./catalog/catalog.component";
 import { RegisterComponent } from "./users/register.component";
 import { SignInComponent } from "./users/sign-in.component";
 import { LoadingComponent } from "./components/loading-spinner.component";
-import { DataRepositoryService } from "./services/data-repository.service"
+import { CatalogRepositoryService } from "./catalog/catalog.repository.service";
+import { UserRepositoryService } from "./services/user-repository.service";
 import { AccountMenuComponent } from "./account-menu.component";
 
 @NgModule({
@@ -28,7 +29,7 @@ import { AccountMenuComponent } from "./account-menu.component";
     ReactiveFormsModule,
     AppRoutingModule
   ],
-  providers: [DataRepositoryService],
+  providers: [CatalogRepositoryService, UserRepositoryService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
