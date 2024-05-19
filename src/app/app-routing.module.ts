@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CoursesComponent } from './components/courses';
-import { RegisterComponent } from './components/sign-in';
-import { SignInComponent } from './components/sign-in';
+import { catalogComponent } from './components/catalog.component';
+import { RegisterComponent } from './components/sign-in.component';
+import { SignInComponent } from './components/sign-in.component';
 
 const routes: Routes = [
-  { path: 'catalog', component: CoursesComponent, },
+  { path: 'catalog', component: catalogComponent, },
   { path: 'users/register', component: RegisterComponent, },
   { path: 'users/sign-in', component: SignInComponent, },
   { path: '', redirectTo: '/catalog', pathMatch: 'full' },
